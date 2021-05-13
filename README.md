@@ -14,13 +14,21 @@ libjpeg
 -------------
 
 Each Fault-Case package contains followings
+
 A. Buggy version
+
 B. Test input for reproduce
+
 C. Bug info
+
 D. Fix commit
+
 E. Fix info
+
 F. Fix version
+
 G. Single fault program
+
 H. Single fault location
 
 
