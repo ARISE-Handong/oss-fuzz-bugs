@@ -14,7 +14,7 @@ then
     git reset --hard $CORRECT_COMMIT
     cd ../
 
-    cp 32130/fault/av_parsers.c ./gpac-repo/src/media_tools
+    cp 32130/faulty_codes/av_parsers.c ./gpac-repo/src/media_tools
 fi
 
 

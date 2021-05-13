@@ -14,8 +14,8 @@ then
     git reset --hard $CORRECT_COMMIT
     cd ../
 
-    cp 31902/fault/isomedia_dev.h ./gpac-repo/include/gpac/internal/isomedia_dev.h
-    cp 31902/fault/box_code_adobe.c ./gpac-repo/src/isomedia/box_code_adobe.c
+    cp 31902/faulty_codes/isomedia_dev.h ./gpac-repo/include/gpac/internal/isomedia_dev.h
+    cp 31902/faulty_codes/box_code_adobe.c ./gpac-repo/src/isomedia/box_code_adobe.c
 fi
 
 

@@ -14,7 +14,7 @@ then
     git reset --hard $CORRECT_COMMIT
     cd ../
 
-    cp 31925/fault/box_code_drm.c ./gpac-repo/src/isomedia/
+    cp 31925/faulty_codes/box_code_drm.c ./gpac-repo/src/isomedia/
 fi
 
 

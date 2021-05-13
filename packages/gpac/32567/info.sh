@@ -14,7 +14,7 @@ then
     git reset --hard $CORRECT_COMMIT
     cd ../
 
-    cp 32567/fault/avc_ext.c ./gpac-repo/src/isomedia
+    cp 32567/faulty_codes/avc_ext.c ./gpac-repo/src/isomedia
 fi
 
 
