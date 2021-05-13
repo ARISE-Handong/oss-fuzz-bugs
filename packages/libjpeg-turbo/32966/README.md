@@ -2,17 +2,17 @@
 
 ------------
 
-Project: libjpeg-turbo
-Fuzzing Engine: libFuzzer
-Fuzz Target: compress_fuzzer
-Job Type: libfuzzer_ubsan_libjpeg-turbo
+Project: libjpeg-turbo\
+Fuzzing Engine: libFuzzer\
+Fuzz Target: compress_fuzzer\
+Job Type: libfuzzer_ubsan_libjpeg-turbo\
 Platform Id: linux
 
-Crash Type: Abrt
-Crash Address: 0x05390000199f
-Crash State:
-  jpeg_free_large
-  self_destruct
+Crash Type: Abrt\
+Crash Address: 0x05390000199f\
+Crash State:\
+  jpeg_free_large\
+  self_destruct\
   jpeg_destroy
   
 Sanitizer: undefined (UBSAN)

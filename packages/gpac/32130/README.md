@@ -2,17 +2,17 @@
 
 ------------
 
-Project: gpac
-Fuzzing Engine: libFuzzer
-Fuzz Target: fuzz_parse
-Job Type: libfuzzer_ubsan_gpac
+Project: gpac\
+Fuzzing Engine: libFuzzer\
+Fuzz Target: fuzz_parse\
+Job Type: libfuzzer_ubsan_gpac\
 Platform Id: linux
 
-Crash Type: Integer-overflow
-Crash Address: 
-Crash State:
-  gf_avc_read_sps_bs_internal
-  gf_avc_read_sps_bs
+Crash Type: Integer-overflow\
+Crash Address: \
+Crash State:\
+  gf_avc_read_sps_bs_internal\
+  gf_avc_read_sps_bs\
   gf_avc_read_sps
   
 Sanitizer: undefined (UBSAN)

@@ -2,17 +2,17 @@
 
 ------------
 
-Project: gpac
-Fuzzing Engine: libFuzzer
-Fuzz Target: fuzz_parse
-Job Type: libfuzzer_asan_gpac
+Project: gpac\
+Fuzzing Engine: libFuzzer\
+Fuzz Target: fuzz_parse\
+Job Type: libfuzzer_asan_gpac\
 Platform Id: linux
 
-Crash Type: Null-dereference READ
-Crash Address: 0x000000000000
-Crash State:
-  AV1_DuplicateConfig
-  AV1_RewriteESDescriptorEx
+Crash Type: Null-dereference READ\
+Crash Address: 0x000000000000\
+Crash State:\
+  AV1_DuplicateConfig\
+  AV1_RewriteESDescriptorEx\
   AV1_RewriteESDescriptor
   
 Sanitizer: address (ASAN)

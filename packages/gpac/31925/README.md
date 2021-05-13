@@ -2,17 +2,17 @@
 
 ------------
 
-Project: gpac
-Fuzzing Engine: libFuzzer
-Fuzz Target: fuzz_parse
-Job Type: libfuzzer_ubsan_gpac
+Project: gpac\
+Fuzzing Engine: libFuzzer\
+Fuzz Target: fuzz_parse\
+Job Type: libfuzzer_ubsan_gpac\
 Platform Id: linux
 
-Crash Type: Abrt
-Crash Address: 0x053900002ca9
-Crash State:
-  gf_realloc
-  gf_list_add
+Crash Type: Abrt\
+Crash Address: 0x053900002ca9\
+Crash State:\
+  gf_realloc\
+  gf_list_add\
   gf_isom_parse_movie_boxes_internal
 
 Sanitizer: undefined (UBSAN)

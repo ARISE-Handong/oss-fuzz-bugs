@@ -2,17 +2,17 @@
 
 ------------
 
-Project: gpac
-Fuzzing Engine: libFuzzer
-Fuzz Target: fuzz_parse
-Job Type: libfuzzer_asan_gpac
+Project: gpac\
+Fuzzing Engine: libFuzzer\
+Fuzz Target: fuzz_parse\
+Job Type: libfuzzer_asan_gpac\
 Platform Id: linux
 
-Crash Type: Heap-buffer-overflow READ 9
-Crash Address: 0x602000000138
-Crash State:
-  gf_strdup
-  abst_box_read
+Crash Type: Heap-buffer-overflow READ 9\
+Crash Address: 0x602000000138\
+Crash State:\
+  gf_strdup\
+  abst_box_read\
   gf_isom_box_read
   
 Sanitizer: address (ASAN)

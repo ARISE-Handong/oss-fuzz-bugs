@@ -6,14 +6,14 @@ Project: clamav\
 Fuzzing Engine: libFuzzer\
 Fuzz Target: clamav_scanmap_fuzzer\
 Job Type: libfuzzer_asan_clamav\
-Platform Id: linux\
+Platform Id: linux
 
 Crash Type: Heap-buffer-overflow READ 1\
 Crash Address: 0x602000006732\
 Crash State:\
   rijndaelDecrypt\
   aes_256cbc_decrypt\
-  check_user_password\
+  check_user_password
   
 Sanitizer: address (ASAN)
 

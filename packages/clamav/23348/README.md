@@ -5,14 +5,14 @@ Project: clamav\
 Fuzzing Engine: libFuzzer\
 Fuzz Target: clamav_scanmap_fuzzer\
 Job Type: libfuzzer_asan_clamav\
-Platform Id: linux\
+Platform Id: linux
 
 Crash Type: Direct-leak\
 Crash Address: \
 Crash State:\
   cli_realloc\
   cli_codepage_to_utf8\
-  cli_vba_readdir_new\
+  cli_vba_readdir_new
   
 Sanitizer: address (ASAN)
 

@@ -6,14 +6,14 @@ Project: clamav\
 Fuzzing Engine: libFuzzer\
 Fuzz Target: clamav_scanmap_fuzzer\
 Job Type: libfuzzer_asan_clamav\
-Platform Id: linux\
+Platform Id: linux
 
 Crash Type: Null-dereference READ\
 Crash Address: 0x000000000000\
 Crash State:\
   rijndaelDecrypt\
   aes_256cbc_decrypt\
-  check_user_password\
+  check_user_password
   
 Sanitizer: address (ASAN)
 

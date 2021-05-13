@@ -2,17 +2,17 @@
 
 ------------
 
-Project: libjpeg-turbo
-Fuzzing Engine: libFuzzer
-Fuzz Target: compress_fuzzer
-Job Type: libfuzzer_msan_libjpeg-turbo
+Project: libjpeg-turbo\
+Fuzzing Engine: libFuzzer\
+Fuzz Target: compress_fuzzer\
+Job Type: libfuzzer_msan_libjpeg-turbo\
 Platform Id: linux
 
-Crash Type: Use-of-uninitialized-value
-Crash Address: 
-Crash State:
-  get_gray_cmyk_row
-  tjLoadImage
+Crash Type: Use-of-uninitialized-value\
+Crash Address: \
+Crash State:\
+  get_gray_cmyk_row\
+  tjLoadImage\
   compress.cc
   
 Sanitizer: memory (MSAN)

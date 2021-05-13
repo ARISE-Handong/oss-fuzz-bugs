@@ -2,17 +2,17 @@
 
 ------------
 
-Project: libjpeg-turbo
-Fuzzing Engine: libFuzzer
-Fuzz Target: compress_fuzzer
-Job Type: libfuzzer_ubsan_libjpeg-turbo
+Project: libjpeg-turbo\
+Fuzzing Engine: libFuzzer\
+Fuzz Target: compress_fuzzer\
+Job Type: libfuzzer_ubsan_libjpeg-turbo\
 Platform Id: linux
 
-Crash Type: Integer-overflow
-Crash Address: 
-Crash State:
-  start_input_bmp
-  tjLoadImage
+Crash Type: Integer-overflow\
+Crash Address: \
+Crash State:\
+  start_input_bmp\
+  tjLoadImage\
   compress.cc
   
 Sanitizer: undefined (UBSAN)
