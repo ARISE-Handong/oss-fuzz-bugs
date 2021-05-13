@@ -40,9 +40,14 @@ H. Single fault location
 1. This benchmark depends on oss-fuzz build scripts(https://github.com/google/oss-fuzz).  Since oss-fuzz uses docker, you need to install docker to build fuzzers.
 
    https://www.docker.com/
-   
 
-2. For building fuzzers, following steps are required
+2. Clone oss fuzz repository
+
+   ```bash
+   $ git clone https://github.com/google/oss-fuzz.git
+   ```
+   
+3. For building fuzzers, following steps are required
 
    ```bash
    $ python infra/helper.py pull_images
@@ -52,7 +57,7 @@ H. Single fault location
    * https://google.github.io/oss-fuzz/advanced-topics/reproducing/
      
 
-3. Build fuzzers with following options in project directory
+4. Build fuzzers with following options in project directory
 
    ```bash
    $ ./build.sh \ 
