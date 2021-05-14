@@ -34,7 +34,6 @@ fi
 SANITIZER=address
 FUZZER=libfuzzer
 
-POSITIONAL=()
 while [[ $# -gt 0 ]]
 do
 key="$1"
@@ -42,27 +41,26 @@ key="$1"
 case $key in
     -i|--id)
     ISSUE_ID="$2"
-    shift # past argument
-    shift # past value
+    shift 
+    shift 
     ;;
     -b|--build)
     BUILD_MODE="$2"
-    shift # past argument
-    shift # past value
+    shift 
+    shift 
     ;;
     -s|--sanitizer)
     SANITIZER="$2"
-    shift # past argument
-    shift # past value
+    shift 
+    shift 
     ;;
     -f|--fuzzer)
     FUZZER="$2"
-    shift # past argument
-    shift # past value
+    shift 
+    shift 
     ;;
-    *)    # unknown option
-    POSITIONAL+=("$1") # save it in an array for later
-    shift # past argument
+    *)    
+    shift 
     ;;
 esac
 done
