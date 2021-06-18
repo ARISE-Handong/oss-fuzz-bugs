@@ -65,21 +65,22 @@ case $key in
 esac
 done
 
-$ISSUE_ID/Info.sh $BUILD_MODE
+. $ISSUE_ID/Info.sh $BUILD_MODE
 
 case $BUILD_MODE in
     "buggy")
-    python $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $BUGGY_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
+    python3 $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $BUGGY_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
     ;;
     "fix")
-    python $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $FIX_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
+    python3 $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $FIX_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
     ;;
     "single")
     pwd
-    python $INFRA_DIR/helper.py build_fuzzers --sanitizer $SANITIZER $PROJECT ./$PROJECT-repo 
+    python3 $INFRA_DIR/helper.py build_fuzzers --sanitizer $SANITIZER $PROJECT ./$PROJECT-repo 
     ;;
 esac
 
-cp -r $FUZZER_DIR $ISSUE_ID-$BUILD_MODE-$SANITIZER
+[ ! -e BUILD ] && mkdir BUILD
+cp -rv $FUZZER_DIR BUILD/$ISSUE_ID-$BUILD_MODE-$SANITIZER
 
 
