@@ -40,11 +40,18 @@
 [Issue 31902: gpac:fuzz_parse: Heap-buffer-overflow in gf_strdup](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=31925&q=31925&can=1)
 
 
-There is known bugs that were found in latest version
+### ISSUES
 
-* ASAN 
+---------
+There are known bugs found in latest version
+
+ASAN
+-----------
 - Segment fault 
 - Leak
 
-* UBSAN
+
+
+UBSAN
+-----------
 - Segment fault
