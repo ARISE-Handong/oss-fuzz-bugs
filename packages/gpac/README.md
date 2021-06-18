@@ -38,3 +38,13 @@
 [Issue 32567: gpac:fuzz_parse: Null-dereference READ in AV1_DuplicateConfig](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=32567&q=32567&can=1)
 
 [Issue 31902: gpac:fuzz_parse: Heap-buffer-overflow in gf_strdup](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=31925&q=31925&can=1)
+
+
+There is known bugs that were found in latest version
+
+* ASAN 
+- Segment fault 
+- Leak
+
+* UBSAN
+- Segment fault
