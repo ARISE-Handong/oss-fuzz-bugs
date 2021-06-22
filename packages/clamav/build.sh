@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 [ ! -e $(basename $0) ] && exit 1
 
 OSSFUZZ_DIR=$(dirname $(dirname `pwd`))/oss-fuzz

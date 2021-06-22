@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 [ ! -e $(basename $0) ] && exit 1
 
 OSSFUZZ_DIR=$(dirname $(dirname `pwd`))/oss-fuzz
@@ -75,7 +73,6 @@ case $BUILD_MODE in
 	    python3 $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $FIX_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
 	    ;;
     "single")
-	    pwd
 	    python3 $INFRA_DIR/helper.py build_fuzzers --sanitizer $SANITIZER $PROJECT `pwd`/$PROJECT-repo 
 	    ;;
     *)
