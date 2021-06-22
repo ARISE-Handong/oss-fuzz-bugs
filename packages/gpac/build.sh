@@ -73,7 +73,7 @@ case $BUILD_MODE in
 	    python3 $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $FIX_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
 	    ;;
     "single")
-	    python3 $INFRA_DIR/helper.py build_fuzzers --sanitizer $SANITIZER $PROJECT ./$PROJECT-repo 
+	    python3 $INFRA_DIR/helper.py build_fuzzers --sanitizer $SANITIZER $PROJECT `pwd`/$PROJECT-repo 
 	    ;;
     *)
 	    echo "INVALID BUILD MODE"
