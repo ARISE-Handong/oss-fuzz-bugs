@@ -11,6 +11,7 @@ if [ $1 = "single" ]
 then
     [ ! -e libjpeg-turbo-repo ] && git clone https://github.com/sailfishos-mirror/libjpeg-turbo.git libjpeg-turbo-repo
     cd libjpeg-turbo-repo
+    git clean -d -x -f
     git reset --hard $CORRECT_COMMIT
     cd ../
 

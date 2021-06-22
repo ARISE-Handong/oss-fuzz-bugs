@@ -11,6 +11,7 @@ if [ $1 = "single" ]
 then
     [ ! -e clamav-repo ] && git clone https://github.com/Cisco-Talos/clamav-devel.git clamav-repo
     cd clamav-repo
+    git clean -d -x -f
     git reset --hard $CORRECT_COMMIT
     cd ../
 

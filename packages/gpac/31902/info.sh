@@ -11,6 +11,7 @@ if [ $1 = "single" ]
 then
     [ ! -e gpac-repo ] && git clone https://github.com/gpac/gpac.git gpac-repo
     cd gpac-repo
+    git clean -d -x -f
     git reset --hard $CORRECT_COMMIT
     cd ../
 
