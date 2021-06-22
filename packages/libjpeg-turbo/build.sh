@@ -65,7 +65,7 @@ case $key in
 esac
 done
 
-. $ISSUE_ID/Info.sh $BUILD_MODE
+. $ISSUE_ID/info.sh $BUILD_MODE
 
 case $BUILD_MODE in
     "buggy")
