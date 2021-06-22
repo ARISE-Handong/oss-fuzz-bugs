@@ -76,7 +76,7 @@ case $BUILD_MODE in
 	    ;;
     "single")
 	    pwd
-	    python3 $INFRA_DIR/helper.py build_fuzzers --sanitizer $SANITIZER $PROJECT ./$PROJECT-repo 
+	    python3 $INFRA_DIR/helper.py build_fuzzers --sanitizer $SANITIZER $PROJECT `pwd`/$PROJECT-repo 
 	    ;;
     *)
 	    echo "INVALID BUILD MODE"
