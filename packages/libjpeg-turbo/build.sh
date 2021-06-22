@@ -40,28 +40,28 @@ key="$1"
 
 case $key in
     -i|--id)
-    ISSUE_ID="$2"
-    shift 
-    shift 
-    ;;
+	    ISSUE_ID="$2"
+	    shift 
+	    shift 
+	    ;;
     -b|--build)
-    BUILD_MODE="$2"
-    shift 
-    shift 
-    ;;
+	    BUILD_MODE="$2"
+	    shift 
+	    shift 
+	    ;;
     -s|--sanitizer)
-    SANITIZER="$2"
-    shift 
-    shift 
-    ;;
+	    SANITIZER="$2"
+	    shift 
+	    shift 
+	    ;;
     -f|--fuzzer)
-    FUZZER="$2"
-    shift 
-    shift 
-    ;;
+	    FUZZER="$2"
+	    shift 
+	    shift 
+	    ;;
     *)    
-    shift 
-    ;;
+	    shift 
+	    ;;
 esac
 done
 
@@ -69,15 +69,19 @@ done
 
 case $BUILD_MODE in
     "buggy")
-    python3 $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $BUGGY_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
-    ;;
+	    python3 $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $BUGGY_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
+	    ;;
     "fix")
-    python3 $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $FIX_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
-    ;;
+	    python3 $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $FIX_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
+	    ;;
     "single")
-    pwd
-    python3 $INFRA_DIR/helper.py build_fuzzers --sanitizer $SANITIZER $PROJECT ./$PROJECT-repo 
-    ;;
+	    pwd
+	    python3 $INFRA_DIR/helper.py build_fuzzers --sanitizer $SANITIZER $PROJECT ./$PROJECT-repo 
+	    ;;
+    *)
+	    echo "INVALID BUILD MODE"
+	    exit
+	    ;;
 esac
 
 [ ! -e BUILD ] && mkdir BUILD
