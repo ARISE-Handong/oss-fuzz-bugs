@@ -14,7 +14,7 @@ then
     git reset --hard $CORRECT_COMMIT
     cd ../
 
-    cp 32966/faulty_codes/jcphuff.c ./libjpeg-turbo-repo/jcphuff.c
+    cp 32966/faulty_codes/rdppm.c ./libjpeg-turbo-repo/rdppm.c
 fi
 
 
