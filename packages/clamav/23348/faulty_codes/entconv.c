@@ -895,8 +895,9 @@ cl_error_t cli_codepage_to_utf8(char* in, size_t in_size, uint16_t codepage, cha
                         goto done;
                     }
 
-		    //23348 out_utf8 = malloc(out_utf8_size + 1);
-                    lpWideCharStr = cli_malloc((cchWideChar) * sizeof(WCHAR)); /* No need for a null terminator here, we'll deal with the exact size */
+		    //23348 
+		    out_utf8 = malloc(out_utf8_size + 1);
+		    //out_utf8 = cli_malloc(out_utf8_size + 1);
                     if (NULL == lpWideCharStr) {
                         cli_dbgmsg("cli_codepage_to_utf8: failed to allocate memory for wide char string.\n");
                         status = CL_EMEM;
