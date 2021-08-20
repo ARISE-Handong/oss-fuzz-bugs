@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 [ -e $(basename $0) ] && exit 1
 
 PROJECT_LIST=("gpac" "clamav" "libjpeg-turbo")
@@ -80,7 +78,7 @@ case $BUILD_MODE in
 	    python3 $INFRA_DIR/build_specified_commit.py --project_name $PROJECT --commit $FIX_COMMIT  --engine $FUZZER --sanitizer $SANITIZER
 	    ;;
     "single")
-	    python3 $INFRA_DIR/helper.py build_fuzzers --clean --sanitizer $SANITIZER $PROJECT --mount_path `pwd`/$PROJECT-repo 
+	    python3 $INFRA_DIR/helper.py build_fuzzers --clean --sanitizer $SANITIZER $PROJECT --engine $FUZZER --mount_path `pwd`/$PROJECT-repo 
 	    ;;
     *)
 	    echo "INVALID BUILD MODE"
