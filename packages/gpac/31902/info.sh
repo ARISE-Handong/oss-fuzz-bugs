@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ ! -e $(basename $0) ] && echo "PLEASE USE THIS SCRIPT FROM PACKAGE DIRECTORY" && exit 1
+[ -e $(basename $0) ] && echo "PLEASE USE THIS SCRIPT FROM PACKAGE DIRECTORY" && exit 1
 
 export BUGGY_COMMIT=da59a5b8fed9e1c260b8e87ea0bfe7d8d5369fcd
 export FIX_COMMIT=e74be5976a6fee059c638050a237893f7e9a3b23
