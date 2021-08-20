@@ -57,13 +57,4 @@ H. Single fault location
    * https://google.github.io/oss-fuzz/advanced-topics/reproducing/
      
 
-4. Build fuzzers with following options in project directory
-
-   ```bash
-   $ ./build.sh \ 
-   [-i|--id] $ISSUE_ID [-b|--build] <buggy/fix/single>  
-   [-s|--sanitizer] <address/memory/undefined> [-f|--fuzzer] <libfuzzer/afl>
-   ```
-
-   
 
