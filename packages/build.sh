@@ -2,6 +2,7 @@
 
 [ ! -e $(basename $0) ] && exit 1
 
+PROJECT_LIST=("gpac" "clamav" "libjpeg-turbo")
 OSSFUZZ_DIR=$(dirname $(dirname `pwd`))/oss-fuzz
 INFRA_DIR=$OSSFUZZ_DIR/infra
 BUILD_DIR=$OSSFUZZ_DIR/build
@@ -14,19 +15,23 @@ display_usage() {
     echo -e "Default: --sanitizer address --fuzzer library \n"
 } 
 
-if [  $# -le 3 ] 
-then 
-    display_usage
-    exit 1
-elif [[ ( $# == "--help") ||  $# == "-h" ]] 
-then 
-    display_usage
-    exit 0
-elif [[ "$EUID" -ne 0 ]]; then 
-    echo "This script must be run as root!" 
-    exit 1
-fi 
- 
+if printf '%s\n' "${PROJECT_LIST[@]}" | grep -q -P "$PROJECT"; then
+	if [  $# -le 3 ] 
+	then 
+	    display_usage
+	    exit 1
+	elif [[ ( $# == "--help") ||  $# == "-h" ]] 
+	then 
+	    display_usage
+	    exit 0
+	elif [[ "$EUID" -ne 0 ]]; then 
+	    echo "This script must be run as root!" 
+	    exit 1
+	fi 
+else
+	echo "Run this script in project directory"
+	exit 1
+fi
 
 #default values
 SANITIZER=address
