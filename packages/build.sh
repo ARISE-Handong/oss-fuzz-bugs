@@ -68,6 +68,8 @@ case $key in
 esac
 done
 
+[ -e BUILD/$ISSUE_ID-$BUILD_MODE-$SANITIZER-$FUZZER ] && echo "BUILD directory already exist!" && exit 1
+
 . $ISSUE_ID/info.sh $BUILD_MODE
 
 case $BUILD_MODE in
