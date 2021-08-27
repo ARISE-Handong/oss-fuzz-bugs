@@ -450,6 +450,7 @@ start_input_bmp(j_compress_ptr cinfo, cjpeg_source_ptr sinfo)
   if (!ReadOK(source->pub.input_file, bmpinfoheader, 4))
     ERREXIT(cinfo, JERR_INPUT_EOF);
   headerSize = GET_4B(bmpinfoheader, 0);
+  //32982
   if (headerSize < 12 || headerSize > 64)
     ERREXIT(cinfo, JERR_BMP_BADHEADER);
   if (!ReadOK(source->pub.input_file, bmpinfoheader + 4, headerSize - 4))
@@ -577,6 +578,7 @@ start_input_bmp(j_compress_ptr cinfo, cjpeg_source_ptr sinfo)
       ERREXIT(cinfo, JERR_BAD_IN_COLORSPACE);
     if ((unsigned long long)biWidth * 3ULL > 0xFFFFFFFFULL)
       ERREXIT(cinfo, JERR_WIDTH_OVERFLOW);
+    //32982
     row_width = (JDIMENSION)(biWidth * 3);
     break;
   case 32:
@@ -590,6 +592,7 @@ start_input_bmp(j_compress_ptr cinfo, cjpeg_source_ptr sinfo)
       ERREXIT(cinfo, JERR_BAD_IN_COLORSPACE);
     if ((unsigned long long)biWidth * 4ULL > 0xFFFFFFFFULL)
       ERREXIT(cinfo, JERR_WIDTH_OVERFLOW);
+    //32982
     row_width = (JDIMENSION)(biWidth * 4);
     break;
   default:
